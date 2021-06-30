@@ -1,0 +1,12 @@
+abbr fishconf "nvim ~/.config/fish/config.fish"
+# abbr quteconf "nvim ~/.config/qutebrowser/config.py"
+abbr fishabbr "nvim ~/.config/fish/shortcuts.fish"
+abbr leftconf "nvim ~/.config/leftwm/config.toml"
+# abbr bspconf "nvim ~/.config/bspwm/bspwmrc"
+abbr roficonf "nvim ~/.config/rofi/config.rasi"
+abbr startconf "nvim ~/.config/startship.toml"
+abbr picomconf "nvim ~/.config/picom/picom.conf"
+abbr nvimconf "nvim ~/.config/nvim/init.vim"
+abbr vimconf "nvim ~/.vimrc"
+abbr bashconf "nvim ~/bashrc"
+abbr mkdir 'mkdir -p'

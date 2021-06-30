@@ -1,0 +1,129 @@
+# Agregar nueva linea
+add_newline = false
+scan_timeout = 10
+
+# Usuario
+[username]
+style_user = "red bold"
+style_root = "black bold"
+format = """
+[┌──────> [$user]($style) ](bold green)
+[└─>](bold green) """
+disabled = false
+show_always = true
+
+# Hostname
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took [$duration]($style)"
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
+
+[time]
+time_format = "%T"
+format = "🕙 $time($style) "
+style = "bright-white"
+disabled = false
+
+[package]
+disabled = true
+
+# Caracteres
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold yellow) "
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[shell]
+fish_indicator = ""
+powershell_indicator = "_"
+unknown_indicator = "mystery shell"
+disabled = false
+
+#########################################################################
+#########################################################################
+#########################################################################
+[git_branch]
+format = " [$symbol $branch]($style) "
+symbol = "🍣 "
+style = "bold yellow"
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+#########################################################################
+#########################################################################
+#########################################################################
+
+# Lenguajes y entornos
+[conda]
+symbol = "🐍|"
+
+[python]
+format = "[🐍 $version]($style) "
+style = "bold green"
+
+[docker_context]
+format = "via [🐳 $version]($style) "
+style = "blue bold"
+only_with_files = true
+disabled = false
+
+[dart]
+format = "via [🔰 $version]($style) "
+style = "bold green"
+
+[lua]
+format = "via [🌕 $version]($style) "
+style = "bold green"
+
+[rust]
+format = "via [🦀 $version]($style)"
+style = "bold green"
+
+[nodejs]
+format = "via [🤖 $version]($style) "
+style = "bold green"
+
+[php]
+format = "via [🐘 $version]($style) "
+style = "bold green"
+
+[ruby]
+format = "via [🔺 $version]($style) "
+style = "bold green"
